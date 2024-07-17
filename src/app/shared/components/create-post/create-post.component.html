@@ -1,0 +1,18 @@
+<div class="popup">
+    <div class="popup-content">
+      <button class="btn close" (click)="cerrar()">x</button>
+      <h2>Crear Post</h2>
+      <form [formGroup]="popupForm" (ngSubmit)="cerrar()">
+        <div class="input-group">
+          <input type="text" id="titulo" formControlName="titulo" required>
+          <label for="titulo" autocomplete="off">Titulo</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="descripcion" formControlName="descripcion" required>
+          <label for="descripcion" autocomplete="off">Descripcion</label>
+        </div>
+        <button class="btn btn__bg" type="submit">Guardar</button>
+      </form>
+    </div>
+  </div>
+  

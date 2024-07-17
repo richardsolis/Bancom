@@ -1,0 +1,97 @@
+.row-login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .image-bg {
+        width: 100%;
+        height: 100%;
+        background-image: url(/assets/imagenes/login.jpg);
+        background-size: cover;
+    }
+    .login {
+        width: 100%;
+        min-width: 720px;
+        height: 100%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .content {
+            form {
+                width: 369px;
+                button {
+                    text-align: center;
+                    width: 100%;
+                    height: 50px;
+                    margin: 10px 0;
+                    .content-loader {
+                        margin: auto;
+                        width: 25px;
+                        mat-spinner {
+                            --mdc-circular-progress-active-indicator-color: white;
+                        }
+                    }
+                }
+            }
+            h3 {
+                margin-bottom: 20px;
+                color: #1A202C;
+                font-size: 30px;
+            }
+            
+            .forgot-password {
+              margin-bottom: 20px;
+              text-align: right;
+              a {
+                color: #673ab7;
+                text-decoration: none;
+                font-size: 14px;
+              }
+            }
+            
+            .remember-me {
+              display: flex;
+              align-items: center;
+              margin-bottom: 20px;
+            
+              input {
+                margin-right: 5px;
+              }
+            }
+            
+        }
+        
+    }
+
+    .invalid-input {
+        border-color: #f44336 !important;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .row-login {
+        .login {
+            min-width: 600px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .row-login {
+        .login {
+            min-width: 450px;
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .row-login {
+        .image-bg  {
+            display: none;
+        }
+        .login {
+            min-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+<table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Username</th>
+        <th>Dirección</th>
+        <th>Correo</th>
+        <th>Phone Number</th>
+        <th>Post</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let lists of list; let i = index">
+        <tr [ngClass]="{ 'content-list': true, 'even-row': i % 2 === 1 }">
+          <td>{{ lists.name }}</td>
+          <td>{{ lists.username }}</td>
+          <td>{{ lists.address }}</td>
+          <td>{{ lists.email }}</td>
+          <td>{{ lists.phone }}</td>
+          <td>
+            <button class="btn-arrow" [ngClass]="lists.collapsed ? 'btn-arrow-rotate' : ''" (click)="toggleCollapsed(lists)">
+                <img src="./assets/imagenes/icons/arrow.svg" alt="">
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="6" style="padding: 0;">
+            <div class="post" [ngClass]="lists.collapsed ? 'open' : ''">
+                <div class="content-post" *ngIf="lists.post.length != 0">
+                    <div *ngFor="let post of lists.post">
+                        <h3>{{post.titulo}}</h3>
+                        <p>{{post.descripcion}}</p>
+                        <br>
+                    </div>
+                </div>
+                <div *ngIf="lists.collapsed">
+                    <p *ngIf="lists.post.length === 0">Aún no tienes posts</p>
+                    <button class="btn btn__bg btn-crear" (click)="createPost(lists)">Crear post</button>
+                </div>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+
+  <app-create-post *ngIf="popupVisible" (cerrarPopup)="onCerrarPopup($event)"></app-create-post>
+
+  

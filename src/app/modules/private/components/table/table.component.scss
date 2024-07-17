@@ -1,0 +1,56 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+td {
+    border-bottom: 0.1px solid rgba(230, 231, 233, 1);
+    padding: 10px;
+    text-align: center;
+    color: #05111A;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12.2px;
+    .btn-crear{
+        padding: 10px 21px;
+        margin-top: 12px;
+    }
+}
+th {
+    background-color: #808692;
+    color: white;
+    text-align: center;
+    padding: 12.2px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.even-row {
+    background-color: rgba(249, 250, 252, 1);
+}
+
+.post {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.open {
+    height: 200px;
+}
+
+
+.btn-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-arrow-rotate {
+    transform: rotate(180deg);
+}

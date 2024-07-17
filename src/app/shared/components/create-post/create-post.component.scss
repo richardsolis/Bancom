@@ -1,0 +1,48 @@
+/* popup.component.scss */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(245 245 245 / 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        font-weight: 100;
+        font-size: 25px;
+        padding: 10px;
+    }
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  
